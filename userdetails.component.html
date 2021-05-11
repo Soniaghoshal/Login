@@ -1,0 +1,50 @@
+<br/>
+<br/>
+<br/>
+<div class="container">
+
+  
+    <table class="table table-striped">
+  
+      <thead>
+  
+          <tr>
+  
+            <th>USERNAME</th>
+  
+            <th>PASSWORD</th>
+  
+            <th>EMAIL ID</th>
+  
+            <th>PHONE NUMBER</th>
+            
+          </tr>
+  
+      </thead>
+  
+      <tbody>
+  
+        <tr *ngFor="let reg of UserList; let j=index">
+  
+          <td>{{ reg.username }}</td>
+  
+          <td>{{ reg.password }}</td>
+  
+          <td>{{ reg.email }}</td>
+  
+          <td>{{ reg.phone }}</td>
+         
+          <td><button name="button" (click)="editUser(reg,j)">Edit</button></td>
+          <td><button name="button" (click)="delete(reg.username)">Delete</button></td>
+      
+          
+        </tr>
+  
+      </tbody>
+     
+      
+    </table>
+    
+  
+   
+  </div>
